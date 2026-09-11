@@ -11,9 +11,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/samsung/o1s/device.mk)
 
 # Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/infinity/config/common_full_phone.mk)
 
-PRODUCT_NAME := lineage_o1s
+PRODUCT_NAME := infinity_o1s
 PRODUCT_DEVICE := o1s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G991B
