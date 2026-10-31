@@ -10,6 +10,14 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from o1s device
 $(call inherit-product, device/samsung/o1s/device.mk)
 
+# Lunaris configuration
+WITH_GMS := true
+TARGET_CUSTOM_UDFPS := true
+TARGET_BOOT_ANIMATION_RES := 1080
+
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.lunaris.maintainer=Kakimakifenci123
+
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
