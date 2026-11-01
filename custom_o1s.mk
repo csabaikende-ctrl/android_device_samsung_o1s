@@ -10,10 +10,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from o1s device
 $(call inherit-product, device/samsung/o1s/device.mk)
 
-# Inherit from common lineage configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# uwuAOSP configuration
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2400
 
-PRODUCT_NAME := lineage_o1s
+# Maintainer (About phone)
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.uwu.maintainer=Kakimakifenci123
+
+# Inherit from common uwuAOSP configuration
+$(call inherit-product, vendor/custom/config/common_full_phone.mk)
+
+PRODUCT_NAME := custom_o1s
 PRODUCT_DEVICE := o1s
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-G991B

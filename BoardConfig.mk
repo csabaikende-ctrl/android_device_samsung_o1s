@@ -16,6 +16,7 @@ BOARD_VENDOR_KERNEL_MODULES_LOAD := sec_debug_sched_info.ko input_booster_lkm.ko
 TARGET_SCREEN_DENSITY := 480
 
 # Properties
+TARGET_PRODUCT_PROP += $(DEVICE_PATH)/product.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 
 # OTA assert
