@@ -10,6 +10,23 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from o1s device
 $(call inherit-product, device/samsung/o1s/device.mk)
 
+# AxionOS configuration
+TARGET_DISABLE_EPPE := true
+TARGET_INCLUDE_AXFX := true
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2400
+
+# AxionOS device info (underscores become spaces in Settings)
+AXION_MAINTAINER := Kakimakifenci123
+AXION_PROCESSOR := Exynos_2100
+AXION_CAMERA_REAR_INFO := 12,12,64
+AXION_CAMERA_FRONT_INFO := 10
+
+# device/axion/common exports AXION_PROCESSOR as persist.sys.axion_cpu_info,
+# but Settings reads persist.sys.axion_processor_info.
+PRODUCT_PRODUCT_PROPERTIES += \
+    persist.sys.axion_processor_info=$(AXION_PROCESSOR)
+
 # Inherit from common lineage configuration
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
